@@ -1,3 +1,5 @@
+{% load block_tags %}
+
 <!doctype html>
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
@@ -119,7 +121,15 @@
 
 <footer>
 <div class="container">
-{% page_menu "pages/menus/footer.html" %}
+
+<div class="row">
+    <div class="col-md-3 middle">{% flatblock "footer first column" %}</div>
+    <div class="col-md-3 middle">{% flatblock "footer second column" %}</div>
+    <div class="col-md-3 middle">{% flatblock "footer third column" %}</div>
+    <div class="col-md-3 middle">{% flatblock "footer fourth column" %}</div>
+</div>
+
+{#{% page_menu "pages/menus/footer.html" %}#}
 
 <div class="row">
 <p class="site-info text-center">

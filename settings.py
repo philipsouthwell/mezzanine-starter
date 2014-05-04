@@ -78,15 +78,15 @@ from __future__ import absolute_import, unicode_literals
 # http://mezzanine.jupo.org/docs/configuration.html#default-settings
 
 # Controls the ordering and grouping of the admin menu.
-#
-# ADMIN_MENU_ORDER = (
-#     ("Content", ("pages.Page", "blog.BlogPost",
-#        "generic.ThreadedComment", ("Media Library", "fb_browse"),)),
-#     ("Shop", ("shop.Product", "shop.ProductOption", "shop.DiscountCode",
-#         "shop.Sale", "shop.Order")),
-#     ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
-#     ("Users", ("auth.User", "auth.Group",)),
-# )
+ADMIN_MENU_ORDER = (('Content', ('pages.Page', 'blog.BlogPost',
+                                 'generic.ThreadedComment', ('Media Library', 'fb_browse'))),
+                    ('Shop', ('shop.Product', 'shop.ProductOption', 'shop.DiscountCode',
+                              'shop.Sale', 'shop.Order')),
+                    ('Blocks', ('mezzanine_blocks.Block', 'mezzanine_blocks.RichBlock',
+                                'mezzanine_blocks.ImageBlock',)),
+                    ('Site', ('sites.Site', 'redirects.Redirect', 'conf.Setting')),
+                    ('Users', ('auth.User', 'auth.Group')))
+
 
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.
@@ -174,12 +174,6 @@ ACCOUNTS_VERIFICATION_REQUIRED = False
 
 # Controls whether or not the left-hand admin menu is collapsed by default.
 ADMIN_MENU_COLLAPSED = False
-
-# Controls the ordering and grouping of the admin menu.
-ADMIN_MENU_ORDER = (('Content',
-        ('pages.Page', 'blog.BlogPost', 'generic.ThreadedComment', ('Media Library', 'fb_browse'))),
-        ('Site', ('sites.Site', 'redirects.Redirect', 'conf.Setting')),
-        ('Users', ('auth.User', 'auth.Group')))
 
 # Key for http://akismet.com spam filtering service. Used for filtering comments and forms.
 AKISMET_API_KEY = ''
@@ -408,6 +402,7 @@ INSTALLED_APPS = (
     "mezzanine.accounts",
     "south",
     #"mezzanine.mobile",
+    "mezzanine_blocks",
 )
 
 # List of processors used by RequestContext to populate the context.
