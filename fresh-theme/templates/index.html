@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load zinnia_tags %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 {% block title %}{% endblock %}
@@ -23,4 +24,10 @@
         <li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">Full list of settings</a></li>
         <li><a href="http://mezzanine.jupo.org/docs/deployment.html">Deploying to a production server</a></li>
     </ul>
+{% endblock %}
+
+{% block right_panel %}
+    <div id="newsbox">
+        {% get_recent_entries %}
+    </div>
 {% endblock %}

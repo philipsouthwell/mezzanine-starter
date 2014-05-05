@@ -82,6 +82,7 @@ ADMIN_MENU_ORDER = (('Content', ('pages.Page', 'blog.BlogPost',
                                  'generic.ThreadedComment', ('Media Library', 'fb_browse'))),
                     ('Shop', ('shop.Product', 'shop.ProductOption', 'shop.DiscountCode',
                               'shop.Sale', 'shop.Order')),
+                    ('News', ('zinnia.Entry', 'zinnia.Category')),
                     ('Blocks', ('mezzanine_blocks.Block', 'mezzanine_blocks.RichBlock',
                                 'mezzanine_blocks.ImageBlock',)),
                     ('Site', ('sites.Site', 'redirects.Redirect', 'conf.Setting')),
@@ -403,6 +404,10 @@ INSTALLED_APPS = (
     "south",
     #"mezzanine.mobile",
     "mezzanine_blocks",
+    # Next for Zinnia
+    "tagging",
+    "mptt",
+    "zinnia",
 )
 
 # List of processors used by RequestContext to populate the context.

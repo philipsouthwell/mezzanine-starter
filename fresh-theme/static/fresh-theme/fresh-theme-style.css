@@ -1,0 +1,4 @@
+/*fresh-theme is an app which gives Mezzanine a unique theme*/
+/*This is the custom css file*/
+
+#newsbox {overflow-y: scroll; height: 300px;}
