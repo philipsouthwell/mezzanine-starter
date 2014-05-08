@@ -1,4 +1,4 @@
-{% load block_tags %}
+{% load block_tags mezzanine_tags %}
 
 <!doctype html>
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
@@ -46,6 +46,13 @@
 <script src="{% static "js/html5shiv.js" %}"></script>
 <script src="{% static "js/respond.min.js" %}"></script>
 <![endif]-->
+
+<!-- To enable inline editing of third party apps -->
+{% if user.is_staff %}
+    <script src="{{ STATIC_URL }}mezzanine/js/jquery-1.7.1.min.js">
+        jQuery.noConflict();
+    </script>
+{% endif %}
 
 {% block extra_head %}{% endblock %}
 </head>
@@ -150,5 +157,6 @@
 </div>
 </footer>
 
+{% editable_loader %}
 </body>
 </html>

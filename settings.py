@@ -82,7 +82,7 @@ ADMIN_MENU_ORDER = (('Content', ('pages.Page', 'blog.BlogPost',
                                  'generic.ThreadedComment', ('Media Library', 'fb_browse'))),
                     ('Shop', ('shop.Product', 'shop.ProductOption', 'shop.DiscountCode',
                               'shop.Sale', 'shop.Order')),
-                    ('News', ('zinnia.Entry', 'zinnia.Category')),
+                    ('News', ('zinnia.Entry',)),
                     ('Blocks', ('mezzanine_blocks.Block', 'mezzanine_blocks.RichBlock',
                                 'mezzanine_blocks.ImageBlock',)),
                     ('Site', ('sites.Site', 'redirects.Redirect', 'conf.Setting')),
@@ -373,7 +373,7 @@ ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 # or "C:/www/django/templates".
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
-TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
+TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, 'templates'), (os.path.join(PROJECT_ROOT, 'fresh-theme', 'templates')))
 
 
 ################

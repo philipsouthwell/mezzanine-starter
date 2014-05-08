@@ -1,11 +1,7 @@
-{% load i18n %}
-{% load mezzanine_tags comment_tags keyword_tags rating_tags future disqus_tags %}
+{% load mezzanine_tags %}
 
- {% for entry in entries %}
-  <h4>{{ entry.title }}</h4>
-      {{ entry.content|richtext_filters|safe }}
-  {% empty %}
-  <li>
-    {% trans "No entries yet." %}
-  </li>
+{% for entry in entries %}
+   {% editable entry.title entry.content %}
+        <h4>{{ entry.title }}</h4> {{ entry.content|richtext_filters|safe }}
+   {% endeditable %}
 {% endfor %}

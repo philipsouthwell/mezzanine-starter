@@ -1,0 +1,7 @@
+{% load mezzanine_tags %}
+
+<p>hi there</p>
+{% for news_post in blog_posts %}
+        <h4>{{ news_post.title }}</h4> {{ news_post.content|richtext_filters|safe }}
+    <p>one line for each post</p>
+{% endfor %}

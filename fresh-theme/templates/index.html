@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% load zinnia_tags %}
+{% load fresh_theme_tags %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 {% block title %}{% endblock %}
@@ -28,6 +28,6 @@
 
 {% block right_panel %}
     <div id="newsbox">
-        {% get_recent_entries %}
+        {% blog_news_feed %}
     </div>
 {% endblock %}
