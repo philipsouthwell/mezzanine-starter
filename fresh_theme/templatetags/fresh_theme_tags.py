@@ -10,7 +10,7 @@ User = get_user_model()
 
 register = template.Library()
 
-@register.inclusion_tag('fresh-theme/tags/posts_display_small.html')
+@register.inclusion_tag('fresh_theme/tags/posts_display_small.html')
 def blog_news_feed():
     """
     Put a list of up to 10 currently published blog posts of category 'News'
