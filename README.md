@@ -13,5 +13,9 @@ To make the four column footer functional open the admin panel and create **Rich
 * footer fourth column
 Images placed in these Rich Blocks should be no more than 250px
 
+Features in development
+-----------------------
+* Make news feed tag used on home page inline editable
+
 
 

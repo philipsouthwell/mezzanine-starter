@@ -1,7 +1,16 @@
 {% load mezzanine_tags %}
 
-<p>hi there</p>
+{% block right_panel_news %}
 {% for news_post in blog_posts %}
-        <h4>{{ news_post.title }}</h4> {{ news_post.content|richtext_filters|safe }}
-    <p>one line for each post</p>
+    {% block right_panel_news_item %}
+    {% if news_post.title %}
+    {% editable news_post.title %}
+        <h4>{{ news_post.title }}</h4>
+    {%  endeditable %}
+    {%  endif %}
+    {% editable news_post.content %}
+        <div>{{ news_post.content|richtext_filters|safe }}</div>
+    {% endeditable %}
+    {% endblock %}
 {% endfor %}
+{% endblock %}

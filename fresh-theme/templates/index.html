@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% load fresh_theme_tags %}
+{% load fresh_theme_tags mezzanine_tags %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 {% block title %}{% endblock %}
@@ -26,8 +26,10 @@
     </ul>
 {% endblock %}
 
+
 {% block right_panel %}
     <div id="newsbox">
+    <h2>News and deals</h2>
         {% blog_news_feed %}
     </div>
 {% endblock %}

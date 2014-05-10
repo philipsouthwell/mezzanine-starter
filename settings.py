@@ -404,10 +404,6 @@ INSTALLED_APPS = (
     "south",
     #"mezzanine.mobile",
     "mezzanine_blocks",
-    # Next for Zinnia
-    "tagging",
-    "mptt",
-    "zinnia",
 )
 
 # List of processors used by RequestContext to populate the context.

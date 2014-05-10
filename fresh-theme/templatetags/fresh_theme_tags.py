@@ -23,9 +23,26 @@ def blog_news_feed():
     """
     blog_posts = BlogPost.objects.published()
     title_or_slug = lambda s: Q(title=s) | Q(slug=s)
-    # try:
-    #     category = BlogCategory.objects.get(title_or_slug('News'))
-    #     blog_posts = blog_posts.filter(categories=category)
-    # except BlogCategory.DoesNotExist:
-    #     return []
-    return list(blog_posts[:10])
+    category = BlogCategory.objects.get(title_or_slug('News'))
+    blog_posts = blog_posts.filter(categories=category)
+    return {'blog_posts': blog_posts[:10]}
+
+@register.as_tag
+def blog_news_feeds():
+    """
+    Put a list of up to 10 recently published blog posts of category 'News'
+    into the template context.
+
+    Usage::
+
+        {% blog_recent_posts %}
+
+    """
+    blog_posts = BlogPost.objects.published()
+    title_or_slug = lambda s: Q(title=s) | Q(slug=s)
+    try:
+        category = BlogCategory.objects.get(title_or_slug('News'))
+        blog_posts = blog_posts.filter(categories=category)
+    except BlogCategory.DoesNotExist:
+        return {'blog_posts': []}
+    return {'blog_posts': blog_posts[:10]}
