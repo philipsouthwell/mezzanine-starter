@@ -95,11 +95,13 @@
 
 <h1>{% block title %}{% endblock %}</h1>
 
+{% block breadcrumb_menu %}
 <ul class="breadcrumb">
 {% spaceless %}
-{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+{% page_menu "pages/menus/breadcrumb.html" %}
 {% endspaceless %}
 </ul>
+{% endblock %}
 
 </div>
 
@@ -125,6 +127,8 @@
     {% endblock %}
 </div>
 </div>
+{% block row_above_footer %}
+{% endblock %}
 </div>
 
 <footer>

@@ -6,30 +6,31 @@
 {% block title %}{% endblock %}
 
 {% block breadcrumb_menu %}
-<li class="active">{% trans "Home" %}</li>
 {% endblock %}
 
 {% block main %}
-    <h2>Congratulations!</h2>
-    <p>
-        Welcome to your new Mezzanine powered website.
-        Here are some quick links to get you started:
-    </p>
-    <ul>
-        <li><a href="/admin/">Log in to the admin interface</a></li>
-        <li><a href="http://mezzanine.jupo.org/docs/content-architecture.html">Creating custom page types</a></li>
-        <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#templates">Modifying HTML templates</a></li>
-        <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin">Changing this homepage</a></li>
-        <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html">Other frequently asked questions</a></li>
-        <li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">Full list of settings</a></li>
-        <li><a href="http://mezzanine.jupo.org/docs/deployment.html">Deploying to a production server</a></li>
-    </ul>
+    <img class="img-responsive img-rounded" src="http://placehold.it/850x300">
 {% endblock %}
 
 
 {% block right_panel %}
-    <div id="newsbox">
+<div id="front-sidebar">
     <h2>News and deals</h2>
+    <div id="newsbox">
         {% blog_news_feed %}
     </div>
+</div>
+{% endblock %}
+
+{% block row_above_footer %}
+<hr/>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="well well-sm text-center">
+            This is a well that is a great spot for a business tagline or phone number for easy access!
+            <a class="btn btn-sm share-twitter" target="_blank" href="http://twitter.com/home?status={{ blog_post.short_url|urlencode }}%20{{ blog_post.title|urlencode }}">{% trans "Share on Twitter" %}</a>
+            <a class="btn btn-sm share-facebook" target="_blank" href="http://facebook.com/sharer.php?u={{ request.build_absolute_uri }}&amp;t={{ blog_post.title|urlencode }}">{% trans "Share on Facebook" %}</a>
+        </div>
+    </div>
+</div>
 {% endblock %}
