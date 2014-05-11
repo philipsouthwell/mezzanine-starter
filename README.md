@@ -5,7 +5,7 @@ A basic mezzanine-cartridge project starter template. Includes a fresh template.
 
 **Under Development**
 
-![Screenshot of this Mezzanine theme](/fresh_theme/static/fresh-theme/example.jpg "Screenshot of this Mezzanine theme")
+![Screenshot of this Mezzanine theme](/fresh_theme/static/fresh-theme/example.jpg "Screenshot of mezzanine-starter home page")
 
 ### Fresh-theme setup
 To make the four column footer functional open the admin panel and create **Rich Blocks** with the following names:
