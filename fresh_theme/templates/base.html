@@ -117,13 +117,10 @@
     {% nevercache %}
     {% include "includes/user_panel.html" %}
     {% endnevercache %}
-    <div class="panel panel-default">
-    <div class="panel-body">
-    {% ifinstalled mezzanine.twitter %}
-    {% include "twitter/tweets.html" %}
-    {% endifinstalled %}
-    </div>
-    </div>
+    <div>{% imageflatblock "right column block first" %}</div>
+    <div>{% imageflatblock "right column block second" %}</div>
+    {% block right_panel_blog_extra %}
+    {% endblock %}
     {% endblock %}
 </div>
 </div>
