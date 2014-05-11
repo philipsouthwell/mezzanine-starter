@@ -21,7 +21,7 @@
 
 
 {% block right_panel %}
-{% blog_recent_posts as current_news_posts %}
+{% blog_recent_posts limit=5 category="News" as current_news_posts %}
 <div id="front-sidebar">
     <h2>News and deals</h2>
     <div id="newsbox">
