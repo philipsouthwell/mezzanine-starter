@@ -1,6 +1,5 @@
 {% extends "base.html" %}
-{% load  %}
-{% load i18n block_tags fresh_theme_tags mezzanine_tags %}
+{% load i18n block_tags fresh_theme_tags mezzanine_tags blog_tags %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 {% block title %}{% endblock %}
@@ -22,10 +21,19 @@
 
 
 {% block right_panel %}
+{% blog_recent_posts as current_news_posts %}
 <div id="front-sidebar">
     <h2>News and deals</h2>
     <div id="newsbox">
-        {% blog_news_feed %}
+        {% for news_post in current_news_posts %}
+            {% block right_panel_news_item %}
+                {% if news_post.title %}
+                    {% editable news_post.title %}<h4>{{ news_post.title }}</h4>{%  endeditable %}
+                {%  endif %}
+                {% editable news_post.content %}{{ news_post.content|richtext_filters|safe }}{% endeditable %}
+            {% endblock %}
+            <hr/>
+        {% endfor %}
     </div>
     <a class="btn btn-sm share-twitter" target="_blank" href="http://twitter.com/home?status={{ request.build_absolute_uri|urlencode }}">{% trans "Share on Twitter" %}</a>
     <a class="btn btn-sm share-facebook" target="_blank" href="http://facebook.com/sharer.php?u={{ request.build_absolute_uri }}">{% trans "Share on Facebook" %}</a>
