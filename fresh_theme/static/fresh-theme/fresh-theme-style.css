@@ -4,3 +4,12 @@
 #newsbox {overflow-y: auto; height: 287px; margin-bottom: 18px;}
 
 #front-sidebar h2 {margin-top: 0px;}
+
+/* Over-riding bootstrap breadcrumb style */
+.breadcrumb {
+  padding: 0px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
