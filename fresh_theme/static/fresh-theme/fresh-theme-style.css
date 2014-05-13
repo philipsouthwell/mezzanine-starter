@@ -13,3 +13,13 @@
   background-color: #f5f5f5;
   border-radius: 4px;
 }
+
+.four-block {
+    background-color: #666666;
+    color: #fff;
+    padding: 24px 0px;
+}
+
+footer {
+    margin-top: 0px;
+}
