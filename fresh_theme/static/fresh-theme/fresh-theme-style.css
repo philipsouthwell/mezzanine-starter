@@ -1,7 +1,8 @@
 /*fresh-theme is an app which gives Mezzanine a unique theme*/
 /*This is the custom css file*/
 
-#newsbox {overflow-y: auto; height: 287px; margin-bottom: 18px;}
+#newsbox {overflow-y: auto; height: 300px; margin-bottom: 48px;}
+#newsbox hr {margin-bottom: 0px; margin-top: 0px;}
 
 #front-sidebar h2 {margin-top: 0px;}
 
