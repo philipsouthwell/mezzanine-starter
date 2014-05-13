@@ -2,7 +2,7 @@
 /*This is the custom css file*/
 
 #newsbox {overflow-y: auto; height: 300px; margin-bottom: 48px;}
-#newsbox hr {margin-bottom: 0px; margin-top: 0px;}
+#newsbox hr {margin-bottom: 18px; margin-top: 6px;}
 
 #front-sidebar h2 {margin-top: 0px;}
 

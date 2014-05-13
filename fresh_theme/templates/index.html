@@ -21,7 +21,7 @@
 
 
 {% block right_panel %}
-{% blog_recent_posts limit=5 category="News" as current_news_posts %}
+{% blog_recent_news_posts limit=5 category="News" as current_news_posts %}
 <div id="front-sidebar">
     <div id="newsbox">
         {% for news_post in current_news_posts %}
