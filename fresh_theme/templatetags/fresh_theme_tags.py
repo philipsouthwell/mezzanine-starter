@@ -58,7 +58,7 @@ def blog_recent_news_posts(limit=5, tag=None, username=None, category=None):
                         'perfect to highlight items.'
         post3 = BlogPost()
         post3.title = 'These example posts are not stored in the database'
-        post3.content = 'Please don\'t try and edit them. As they\'re not stored in the database you\'ll only get an' \
+        post3.content = 'If you try and edit them inline you\'ll only get an' \
                         ' error message. As soon as you publish a blog post of category "News" they will disappear.'
         blog_posts = [post1, post2, post3,]
         return blog_posts

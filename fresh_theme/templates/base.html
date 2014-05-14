@@ -117,8 +117,8 @@
     {% nevercache %}
     {% include "includes/user_panel.html" %}
     {% endnevercache %}
-    <div>{% imageflatblock "right column block first" %}</div>
-    <div>{% imageflatblock "right column block second" %}</div>
+    {% richflatblock "side one" %}
+    {% richflatblock "side two" %}
     {% block right_panel_blog_extra %}
     {% endblock %}
     {% endblock %}
@@ -132,10 +132,10 @@
 <div class="four-block">
     <div class="container">
     <div class ="col-md-12 row">
-        <div class="col-md-3 middle">{% richflatblock "footer first column" %}</div>
-        <div class="col-md-3 middle">{% richflatblock "footer second column" %}</div>
-        <div class="col-md-3 middle">{% richflatblock "footer third column" %}</div>
-        <div class="col-md-3 middle">{% richflatblock "footer fourth column" %}</div>
+        <div class="col-md-3 middle">{% richflatblock "footer one" %}</div>
+        <div class="col-md-3 middle">{% richflatblock "footer two" %}</div>
+        <div class="col-md-3 middle">{% richflatblock "footer three" %}</div>
+        <div class="col-md-3 middle">{% richflatblock "footer four" %}</div>
     </div>
     </div>
 </div>
