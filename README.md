@@ -7,7 +7,7 @@ A basic mezzanine-cartridge project starter template. Includes a fresh template.
 
 ![Screenshot of this Mezzanine theme](/fresh_theme/static/fresh-theme/example.jpg "Screenshot of mezzanine-starter home page")
 
-### Configuration of Blocks and Home Page Feed
+## Configuration of Blocks and Home Page Feed
 This theme has blocks which can be edited from the admin panel.
 
 #### Home page
