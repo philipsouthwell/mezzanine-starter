@@ -52,7 +52,11 @@ $(document).ready(function() {
 
 {% block main %}
 
+<div class="container">
+<div class="row">
+
 {% if images %}
+<div class="col-md-5 middle">
 {% spaceless %}
 <ul id="product-images-large" class="list-unstyled list-inline">
     {% for image in images %}
@@ -77,8 +81,10 @@ $(document).ready(function() {
 {% endif %}
 
 {% endspaceless %}
+</div>
 {% endif %}
 
+<div class="col-md-4 right">
 {% editable product.content %}
 {{ product.content|richtext_filters|safe }}
 {% endeditable %}
@@ -154,5 +160,8 @@ $(document).ready(function() {
     {% endfor %}
 </div>
 {% endif %}
+</div>
 
+</div>
+</div>
 {% endblock %}
