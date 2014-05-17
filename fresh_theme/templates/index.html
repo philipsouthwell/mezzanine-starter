@@ -27,7 +27,7 @@
         {% for news_post in current_news_posts %}
             {% block right_panel_news_item %}
                 {% if news_post.title %}
-                    {% editable news_post.title %}<h4>{{ news_post.title }}</h4>{%  endeditable %}
+                    {% editable news_post.title %}<h4>{{ news_post.title }}</h4>{% endeditable %}
                 {%  endif %}
                 {% editable news_post.content %}{{ news_post.content|richtext_filters|safe }}{% endeditable %}
             {% endblock %}
