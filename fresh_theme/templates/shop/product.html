@@ -1,5 +1,8 @@
 {% extends "shop/base.html" %}
-{% load staticfiles mezzanine_tags shop_tags rating_tags i18n %}
+{% load staticfiles pages_tags mezzanine_tags shop_tags rating_tags i18n %}
+
+{% comment %}{% load pages_tags mezzanine_tags i18n future staticfiles %}
+{% load block_tags fresh_theme_tags %}{% endcomment %}
 
 {% block meta_title %}{{ product.meta_title }}{% endblock %}
 {% block body_id %}category{% endblock %}
@@ -41,9 +44,12 @@ $(document).ready(function() {
 <script src="{% static "cartridge/js/product_variations.js" %}"></script>
 {% endblock %}
 
+
 {% block breadcrumb_menu %}
-{{ block.super }}
+<ul class="breadcrumb">
+{% page_menu "pages/menus/breadcrumb.html" %}
 <li>{{ product.title }}</li>
+</ul>
 {% endblock %}
 
 {% block title %}
