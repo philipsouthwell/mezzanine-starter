@@ -11,66 +11,65 @@ A basic Python 3.3 mezzanine-cartridge project starter template. Includes a fres
 This is a basic starter project for Mezzanine/Cartridge project. As such it requires all the libraries needed by
 Mezzanine and Cartridge. It also uses the library ![mezzanine-blocks](https://github.com/renyi/mezzanine-blocks)
 which needs to be installed from github. All these dependencies can be satisfied by following these instructions
+
 1. Clone this project into your local directory
 2. Create and activate a Python 3.3 virtual environment:
-```bash
-    virtualenv -p Python3.3 /path/to/environment
-    source /path/to/environment/bin/activate
-```
-For windows users the last line should read:
-```bash
-    /path/to/environment/scripts/activate
-```
+   ```bash
+       virtualenv -p Python3.3 /path/to/environment
+       source /path/to/environment/bin/activate
+   ```
+   For windows users the last line should read:
+   ```bash
+       /path/to/environment/scripts/activate
+   ```
 
 3. Within the virtual environment install mezzanine_blocks via pip:
-```bash
-    pip install git+git://github.com/renyi/mezzanine-blocks.git
-```
+   ```bash
+       pip install git+git://github.com/renyi/mezzanine-blocks.git
+   ```
 4. Still in the virtual environment navigate to your project folder and install the other libraries
-```bash
-    pip install -r requirements.txt
-```
-
+   ```bash
+       pip install -r requirements.txt
+   ```
 5. Create a local_settings.py file and fill in your database details
-```python
-DEBUG = True
+   ```python
+   DEBUG = True
 
-# Make these unique, and don't share it with anybody.
-SECRET_KEY = "make-a-unique-key"
-NEVERCACHE_KEY = "make-another-unique-key"
+   # Make these unique, and don't share it with anybody.
+   SECRET_KEY = "make-a-unique-key"
+   NEVERCACHE_KEY = "make-another-unique-key"
 
-DATABASES = {
-    "default": {
-        # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.sqlite3",
-        # DB name or path to database file if using sqlite3.
-        "NAME": "database_name",
-        # Not used with sqlite3.
-        "USER": "",
-        # Not used with sqlite3.
-        "PASSWORD": "",
-        # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "localhost",
-        # Set to empty string for default. Not used with sqlite3.
-        "PORT": "3308",
-    }
-}
+   DATABASES = {
+       "default": {
+           # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
+           "ENGINE": "django.db.backends.sqlite3",
+           # DB name or path to database file if using sqlite3.
+           "NAME": "database_name",
+           # Not used with sqlite3.
+           "USER": "",
+           # Not used with sqlite3.
+           "PASSWORD": "",
+           # Set to empty string for localhost. Not used with sqlite3.
+           "HOST": "localhost",
+           # Set to empty string for default. Not used with sqlite3.
+           "PORT": "3308",
+       }
+   }
 
-ALLOWED_HOSTS = ['27.0.0.1:8000',]
-```
+   ALLOWED_HOSTS = ['27.0.0.1:8000',]
+   ```
 6. Now initialise your database
-```bash
-    python manage.py syncdb
-```
-and also because Mezzanine uses South
-```bash
-    python manage.py migrate
-```
-
+   ```bash
+       python manage.py syncdb
+   ```
+   and also because Mezzanine uses South
+   ```bash
+       python manage.py migrate
+   ```
 7. We should now we able to run our django development server
-```bash
-    python manage.py runserver
-```
+   ```bash
+       python manage.py runserver
+   ```
 8. Navigate in your browser to http://127.0.0.1:8000/ and view your new Mezzanine/Cartridge site!
 
 
