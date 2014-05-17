@@ -190,7 +190,7 @@ BLOG_POST_PER_PAGE = 10
 BLOG_RSS_LIMIT = 20
 
 # Slug of the page object for the blog.
-BLOG_SLUG = 'article'
+BLOG_SLUG = 'blog'
 
 # Enable featured images in blog posts
 BLOG_USE_FEATURED_IMAGE = False
